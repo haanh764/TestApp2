@@ -1,0 +1,14 @@
+{
+  "questions": 
+  [
+
+    {
+       "word": "Apple",
+       "imgPath1": "img1.png",
+       "imgPath2": "img2.png",
+       "imgPath3": "img3.png",
+       "imgPath4": "img4.png"
+    }
+
+  ]
+}

@@ -1,0 +1,28 @@
+<html ng-app="learningApp">
+  <head>
+    <meta charset="utf-8">
+    <title>E-LEARNING</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script>
+      var learningApp = angular.module('learningApp', []);
+      learningApp.controller('Ctrl', function ($scope, $http){
+        $http.get('data.json').success(function(data) {
+          $scope.datas = data;
+        });
+      });
+    </script>
+  </head>
+  <body ng-controller="Ctrl">
+    <h2>QUESTION 1</h2>
+    
+      
+      <ul ng-repeat="data in datas.questions">
+        <li>{{data.word}}</li>
+        <li><img ng-src="{{data.imgPath1}}" width="200"></li>
+        <li><img ng-src="{{data.imgPath2}}" width="200"></li>
+        <li><img ng-src="{{data.imgPath3}}" width="200"></li>
+        <li><img ng-src="{{data.imgPath4}}" width="200"></li>
+      </ul>
+  
+  </body>
+</html>
