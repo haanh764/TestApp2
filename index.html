@@ -3,6 +3,26 @@
     <meta charset="utf-8">
     <title>E-LEARNING</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script type="text/javascript">
+    function change() {
+      var image = document.getElementById('img1');
+      image.src = "true.png"
+    }
+    function change2() {
+      var image = document.getElementById('img2');
+      image.src = "sai.png"
+    }
+    function change3() {
+      var image = document.getElementById('img3');
+      image.src = "sai.png"
+    }
+    function change4() {
+      var image = document.getElementById('img4');
+      image.src = "sai.png"
+    }
+    </script>
+
     <script>
       var learningApp = angular.module('learningApp', []);
       learningApp.controller('Ctrl', function ($scope, $http){
@@ -14,15 +34,15 @@
   </head>
   <body ng-controller="Ctrl">
     <h2>QUESTION 1</h2>
-    
-      
+
+
       <ul ng-repeat="data in datas.questions">
         <li>{{data.word}}</li>
-        <li><img ng-src="{{data.imgPath1}}" width="200"></li>
-        <li><img ng-src="{{data.imgPath2}}" width="200"></li>
-        <li><img ng-src="{{data.imgPath3}}" width="200"></li>
-        <li><img ng-src="{{data.imgPath4}}" width="200"></li>
+        <li><img ng-src="{{data.imgPath1}}" id="img1" width="200" onclick="change();"></li>
+        <li><img ng-src="{{data.imgPath2}}" id="img2" width="200" onclick="change2();"></li>
+        <li><img ng-src="{{data.imgPath3}}" id="img3" width="200" onclick="change3();"></li>
+        <li><img ng-src="{{data.imgPath4}}" id="img4" width="200" onclick="change4();"></li>
       </ul>
-  
+
   </body>
 </html>
