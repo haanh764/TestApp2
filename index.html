@@ -36,13 +36,13 @@
     <h2>QUESTION 1</h2>
 
 
-      <ul ng-repeat="data in datas.questions">
-        <li>{{data.word}}</li>
-        <li><img ng-src="{{data.imgPath1}}" id="img1" width="200" onclick="change();"></li>
-        <li><img ng-src="{{data.imgPath2}}" id="img2" width="200" onclick="change2();"></li>
-        <li><img ng-src="{{data.imgPath3}}" id="img3" width="200" onclick="change3();"></li>
-        <li><img ng-src="{{data.imgPath4}}" id="img4" width="200" onclick="change4();"></li>
-      </ul>
+      <div ng-repeat="data in datas.questions">
+        <h1>{{data.word}}</h1>
+        <img ng-src="{{data.imgPath1}}" id="img1" width="200" onclick="change();">
+        <img ng-src="{{data.imgPath2}}" id="img2" width="200" onclick="change2();">
+        <img ng-src="{{data.imgPath3}}" id="img3" width="200" onclick="change3();">
+        <img ng-src="{{data.imgPath4}}" id="img4" width="200" onclick="change4();">
+      </div>
 
   </body>
 </html>
